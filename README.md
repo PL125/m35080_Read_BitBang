@@ -1,8 +1,8 @@
 # m35080_Read_BitBang
-This default Skech now reads the full memory of EEPROM chips of the m35080 family like M35080, 08ODOWQ, M35080VP and 35080V6. </br> The read begins, after any kind of serial data is transmitted to the arduino (e.g just press the space bar and hit enter).
+This default Skech now reads the full memory of EEPROM chips of the m35080 family like M35080, 080D0WQ, M35080VP and 35080V6. </br> The read begins, after any kind of serial data is transmitted to the arduino (e.g just press the space bar and hit enter).
 
-Secure Incremental Memory rages from 0x00 till 0x1F</br>
-Standard Mempory ranges from 0x20 till 0x3FF
+Secure Incremental Memory ranges from 0x00 till 0x1F</br>
+Standard Memory ranges from 0x20 till 0x3FF
 
 ## Arduino
 I used an arduino micro, but any arduino which supports SPI is fine. Just switch the board in the arduino IDE.
@@ -22,7 +22,7 @@ char val = 0x20;
 write_8(adr, val);
 ```
 
-or also 
+or also
 
 ```
 int adr = 0x2F1;
@@ -72,4 +72,4 @@ Example VIN:
 | Hex  | 4B | 54 | 31 | 37 | 37 | 32 | 37 | 35 |
 | ASCII  | K | T | 1 | 7 | 7 | 2 | 7 | 5 |
 
-So here the last 7 Digits of the Vin are KT17727. For fitting a used cluster you want the whole are to be 0xFF.
+So here the last 7 Digits of the Vin are KT17727. For fitting a used cluster you want the whole area to be 0xFF.
